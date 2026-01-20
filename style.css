@@ -96,10 +96,12 @@ nav h2{
     font-size: 2rem;
 }
 
-nav h2 .wave, .footer-container .wave{
+.wave{
     background: linear-gradient(45deg, #F7E93F, #FB09B4, #9100F8);
+    background-size: 400% 400%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: gradientMove 3s ease infinite;
 }
 
 /* banner */
@@ -143,7 +145,7 @@ nav h2 .wave, .footer-container .wave{
     z-index: 15;
     top: -370px;
     right: -130px;
-    transition: all 0.3s ease;
+    transition: all 1s ease;
 }
 
 .banner-content h2{
@@ -438,6 +440,12 @@ footer{
   100% { opacity: 0; }
 }
 
+@keyframes gradientMove {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 @media screen and (max-width:576px){
     .burger{
         display: block;
@@ -502,3 +510,4 @@ footer{
         padding: 90px;
     }
 }
+
