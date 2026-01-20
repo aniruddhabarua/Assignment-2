@@ -423,7 +423,11 @@ footer{
     margin-top: 30px;
 }
 
-/* animation */
+.burger{
+    display: none;
+}
+
+/* animation and responsive */
 .fade {
   animation: fade 2s infinite;
 }
@@ -432,4 +436,65 @@ footer{
   0%   { opacity: 0; }
   50%  { opacity: 1; }
   100% { opacity: 0; }
+}
+
+@media screen and (max-width:576px){
+    .burger{
+        display: block;
+    }
+    .nav{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .nav .button, .menu a{
+        display: none;
+    }
+    #banner{
+        background-image: url("./assets/hero-bg-576.png");
+    }
+    #about, #feature{
+        padding: 40px 20px 40px 20px;
+    }
+    .about-info{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    }
+    #why-choose{
+        padding: 40px 20px 40px 20px;
+    }
+    .why-choose-content{
+        grid-template-areas:
+        "audio"
+        "mobile"
+        "globe"
+        "interview"
+        "rich";
+    }
+
+    .feature{
+        margin-top: 500px
+    }
+
+    .videos{
+        flex-direction: column;
+        align-items: center
+    }
+    .host-card{
+        flex-direction: column;
+        align-items: center;
+    }
+    .host-content{
+        text-align: center;
+    }
+    .host-socials{
+        justify-content: center;
+    }
+    .host-socials img{
+        left: -1px;
+    }
+    #footer{
+        background-image: url("assets/footer-576.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
